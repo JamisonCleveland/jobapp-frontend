@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { PersonalDetailsComponent } from './pages/personal-details/personal-details.component';
+import { PersonalDetailsComponent } from './job-application/pages/personal-details/personal-details.component';
 
 export const routes: Routes = [
-    { path: 'personal-details', loadChildren: () => import('./pages/personal-details/personal-details.module').then(m => m.PersonalDetailsModule) },
+    { path: 'job-application', loadChildren: () => import('./job-application/job-application.module').then(m => m.JobApplicationModule) },
     // { path: 'work-experience', component: PersonalDetailsComponent },
     // { path: 'education', component: PersonalDetailsComponent },
     // { path: 'skills', component: PersonalDetailsComponent },
-    { path: '',   redirectTo: '/personal-details', pathMatch: 'full' },
+    { path: '',   redirectTo: '/job-application', pathMatch: 'full' },
 ];
