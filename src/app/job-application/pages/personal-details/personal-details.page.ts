@@ -64,7 +64,7 @@ export interface PersonalDetails {
       <debug-form-status [form]="personalDetailsForm"></debug-form-status>
     </main>
   `,
-  styleUrl: './personal-details.component.scss'
+  styleUrl: './personal-details.page.scss'
 })
 export class PersonalDetailsPage {
   personalDetailsForm = inject(FormService).personalDetailsForm;
