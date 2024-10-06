@@ -66,6 +66,6 @@ export interface PersonalDetails {
   `,
   styleUrl: './personal-details.component.scss'
 })
-export class PersonalDetailsComponent {
+export class PersonalDetailsPage {
   personalDetailsForm = inject(FormService).personalDetailsForm;
 }

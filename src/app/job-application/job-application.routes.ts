@@ -7,6 +7,10 @@ export const routes: Routes = [
   },
   {
     path: 'create/personal-details',
-    loadComponent: () => import('./pages/personal-details/personal-details.component').then(m => m.PersonalDetailsComponent)
+    loadComponent: () => import('./pages/personal-details/personal-details.page').then(m => m.PersonalDetailsPage)
+  },
+  {
+    path: 'create/work-experience',
+    loadComponent: () => import('./pages/work-experience/work-experience.page').then(m => m.WorkExperiencePage)
   },
 ];
