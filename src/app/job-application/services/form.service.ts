@@ -12,6 +12,14 @@ export interface PersonalDetailsForm extends FormGroup<{
   linkedinProfileUrl: FormControl<string | null>,
 }> { }
 
+export interface WorkExperienceForm extends FormGroup<{
+  currentEmployer: FormControl<string | null>,
+  jobTitle: FormControl<string | null>,
+  startDate: FormControl<Date | null>,
+  endDate: FormControl<Date | null>,
+  responsibilities: FormControl<string | null>,
+}> { }
+
 export interface Form extends FormGroup<{
   personalDetails: PersonalDetailsForm,
 }> { }
@@ -41,8 +49,17 @@ export class FormService {
     }],
   });
 
+  workExperienceForm = this._formBuilder.group({
+    currentEmployer: [null],
+    jobTitle: [null],
+    startDate: [null],
+    endDate: [null],
+    responsibilities: [null],
+  });
+
   form = this._formBuilder.group({
     personalDetails: this.personalDetailsForm,
+    workExperience: this.workExperienceForm,
   });
 
   constructor() { }

@@ -35,7 +35,7 @@ export interface PersonalDetails {
   template: `
     <mat-toolbar>
       <span>Personal Details</span>
-      <button mat-button [routerLink]="'/asdf'">Next</button>
+      <button mat-button routerLink="../work-experience">Next</button>
     </mat-toolbar>
     <main>
       <form [formGroup]="personalDetailsForm">
