@@ -6,6 +6,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormService } from '../form.service';
 import { DebugFormStatusComponent } from '../form-debug/form-debug.component';
+import { NoopAnimationPlayer } from '@angular/animations';
+import { AnimationDriver } from '@angular/animations/browser';
 
 export interface PersonalDetails {
   fullName: string,
@@ -18,15 +20,6 @@ export interface PersonalDetails {
 
 @Component({
   selector: 'app-personal-details',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    DebugFormStatusComponent,
-  ],
   template: `
     <form [formGroup]="personalDetailsForm">
       <mat-form-field>
