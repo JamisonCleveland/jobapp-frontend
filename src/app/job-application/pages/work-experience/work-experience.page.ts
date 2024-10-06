@@ -23,7 +23,7 @@ import { DebugFormStatusComponent } from "../../components/form-debug/form-debug
 ],
   template: `
     <mat-toolbar>
-      <span>Personal Details</span>
+      <span>Work Experience</span>
       <button mat-button routerLink="../personal-details">Back</button>
       <button mat-button routerLink="../work-experience">Next</button>
     </mat-toolbar>
