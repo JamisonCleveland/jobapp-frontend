@@ -4,7 +4,6 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { routes } from './job-application.routes';
 import { JobApplicationComponent } from './job-application.component';
 
-
 @NgModule({
   declarations: [
     JobApplicationComponent
