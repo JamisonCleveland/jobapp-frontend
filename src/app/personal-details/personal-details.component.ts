@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { FormService } from '../form.service';
 
 export interface PersonalDetails {
   fullName: string,
@@ -13,8 +14,6 @@ export interface PersonalDetails {
   linkedinProfileUrl: string,
 }
 
-const phoneNumberPattern = /^[- +()0-9]+$/;
-const linkedinProfileUrlPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/in\/[A-z0-9_-]+\/?$/;
 
 @Component({
   selector: 'app-personal-details',
@@ -56,12 +55,5 @@ const linkedinProfileUrlPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/in\/[A-
   styleUrl: './personal-details.component.scss'
 })
 export class PersonalDetailsComponent {
-  formBuilder = inject(FormBuilder);
-  personalDetailsForm = this.formBuilder.group({
-    fullName: ['', Validators.required],
-    emailAddress: ['', [Validators.required, Validators.email]],
-    phoneNumber: ['', [Validators.required, Validators.pattern(phoneNumberPattern)]],
-    address: [''],
-    linkedinProfileUrl: ['', Validators.pattern(linkedinProfileUrlPattern)],
-  });
+  personalDetailsForm = inject(FormService).personalDetailsForm;
 }
