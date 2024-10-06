@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { PersonalDetailsComponent } from './personal-details.component';
 import { RouterModule, Routes } from '@angular/router';
-import { DebugFormStatusComponent } from '../../form-debug/form-debug.component';
+import { DebugFormStatusComponent } from '../../components/form-debug/form-debug.component';
 
 const routes: Routes = [
   { path: '', component: PersonalDetailsComponent }
