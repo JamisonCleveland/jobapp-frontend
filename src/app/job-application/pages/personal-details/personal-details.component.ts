@@ -6,7 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 import { DebugFormStatusComponent } from '../../components/form-debug/form-debug.component';
+import { RouterModule } from '@angular/router';
 
 export interface PersonalDetails {
   fullName: string,
@@ -21,17 +23,19 @@ export interface PersonalDetails {
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     MatToolbarModule,
+    MatButtonModule,
     DebugFormStatusComponent,
-    // RouterModule.forChild(routes)
   ],
   template: `
     <mat-toolbar>
       <span>Personal Details</span>
+      <button mat-button [routerLink]="'/asdf'">Next</button>
     </mat-toolbar>
     <main>
       <form [formGroup]="personalDetailsForm">
