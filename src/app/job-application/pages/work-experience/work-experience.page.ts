@@ -7,12 +7,14 @@ import { MatIcon } from '@angular/material/icon';
 import { MatInput } from '@angular/material/input';
 import { MatToolbar } from '@angular/material/toolbar';
 import { DebugFormStatusComponent } from "../../components/form-debug/form-debug.component";
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-work-experience',
   standalone: true,
   imports: [
     ReactiveFormsModule,
+    RouterModule,
     MatToolbar,
     MatButton,
     MatFormField,
