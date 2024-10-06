@@ -49,8 +49,10 @@ export interface PersonalDetails {
         <input matInput type="url" formControlName="linkedinProfileUrl">
       </mat-form-field>
     </form>
-    <p>Form Status: {{ personalDetailsForm.status }}</p>
-    <p>Form: {{ personalDetailsForm.status }}</p>
+    <p>Form validity: {{ personalDetailsForm.status }}</p>
+    <p>Form dirty: {{ personalDetailsForm.dirty }}</p>
+    <p>Form touched: {{ personalDetailsForm.touched }}</p>
+    <p>Form Values: {{ personalDetailsForm.value | json }}</p>
   `,
   styleUrl: './personal-details.component.scss'
 })
