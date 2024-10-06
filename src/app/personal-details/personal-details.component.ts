@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormService } from '../form.service';
+import { DebugFormStatusComponent } from '../form-debug/form-debug.component';
 
 export interface PersonalDetails {
   fullName: string,
@@ -24,6 +25,7 @@ export interface PersonalDetails {
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    DebugFormStatusComponent,
   ],
   template: `
     <form [formGroup]="personalDetailsForm">
@@ -49,10 +51,7 @@ export interface PersonalDetails {
         <input matInput type="url" formControlName="linkedinProfileUrl">
       </mat-form-field>
     </form>
-    <p>Form validity: {{ personalDetailsForm.status }}</p>
-    <p>Form dirty: {{ personalDetailsForm.dirty }}</p>
-    <p>Form touched: {{ personalDetailsForm.touched }}</p>
-    <p>Form Values: {{ personalDetailsForm.value | json }}</p>
+    <debug-form-status [form]="personalDetailsForm"></debug-form-status>
   `,
   styleUrl: './personal-details.component.scss'
 })

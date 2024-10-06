@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-debug',
+  selector: 'debug-form-status',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -14,6 +14,6 @@ import { FormGroup } from '@angular/forms';
   `,
   styleUrl: './form-debug.component.scss'
 })
-export class FormDebugComponent {
+export class DebugFormStatusComponent {
   @Input({ required: true }) form!: FormGroup;
 }
