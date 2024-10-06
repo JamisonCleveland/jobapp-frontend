@@ -4,8 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { FormService } from '../form.service';
-import { DebugFormStatusComponent } from '../form-debug/form-debug.component';
+import { FormService } from '../../form.service';
+import { DebugFormStatusComponent } from '../../form-debug/form-debug.component';
 import { NoopAnimationPlayer } from '@angular/animations';
 import { AnimationDriver } from '@angular/animations/browser';
 
