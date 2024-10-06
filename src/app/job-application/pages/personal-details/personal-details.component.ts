@@ -1,5 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FormService } from '../../services/form.service';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { DebugFormStatusComponent } from '../../components/form-debug/form-debug.component';
 
 export interface PersonalDetails {
   fullName: string,
@@ -11,7 +18,21 @@ export interface PersonalDetails {
 
 @Component({
   selector: 'app-personal-details',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatToolbarModule,
+    DebugFormStatusComponent,
+    // RouterModule.forChild(routes)
+  ],
   template: `
+    <mat-toolbar>
+      <span>Personal Details</span>
+    </mat-toolbar>
     <main>
       <form [formGroup]="personalDetailsForm">
         <mat-form-field>
